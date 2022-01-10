@@ -1,5 +1,5 @@
 const Employee = require("../lib/Employee.js");
-const testEmployee = new Employee("Lauren, 232323, lferrett@gmail.com");
+const testEmployee = new Employee("Lauren", "232323", "lferrett@gmail.com");
 
 describe("Employee", () => {
   it("test to see if the Employee class returns name, id, and email", () => {
