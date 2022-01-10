@@ -1,4 +1,4 @@
-const Employee = require("../lib/Employee");
+const Employee = require("../lib/Employee.js");
 const testEmployee = new Employee("Lauren, 232323, lferrett@gmail.com");
 
 describe("Employee", () => {
@@ -11,24 +11,24 @@ describe("Employee", () => {
 
 describe("getName", () => {
   it("Test to see if getName() returns name", () => {
-    expect(testEmployee.getName).tobe("Lauren");
+    expect(testEmployee.getName()).toBe("Lauren");
   });
 });
 
 describe("getID", () => {
   it("Test to see if getID() returns ID", () => {
-    expect(testEmployee.getID).tobe("232323");
+    expect(testEmployee.getID()).toBe("232323");
   });
 });
 
 describe("getEmail", () => {
   it("Test to see if getEmail() returns name", () => {
-    expect(testEmployee.getEmail).tobe("lferrett@gmail.com");
+    expect(testEmployee.getEmail()).toBe("lferrett@gmail.com");
   });
 });
 
 describe("getRole", () => {
   it("Test to see if getRole() returns role", () => {
-    expect(testEmployee.getRole).tobe("Employee");
+    expect(testEmployee.getRole()).toBe("Employee");
   });
 });
