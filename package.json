@@ -1,4 +1,15 @@
 {
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Lauren's Team Profile Generator",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "inquirer": "^8.2.0",
     "jest": "^27.4.7"
