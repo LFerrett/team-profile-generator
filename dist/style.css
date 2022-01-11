@@ -1,0 +1,13 @@
+body {
+  background-image: url(./paper_bg.jpg);
+  background-repeat: repeat; 
+}
+
+h5 {
+  font-weight: bolder;
+}
+
+h6 {
+  color: navy;
+  text-transform: uppercase;
+}

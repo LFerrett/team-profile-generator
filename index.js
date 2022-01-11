@@ -91,7 +91,7 @@ function initHTML() {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><title>Dunder Mifflin Employee Directory</title>
         <script src="https://kit.fontawesome.com/36d0870215.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../assets/style.css" />
+        <link rel="stylesheet" href="../dist/style.css" />
     </head>
     <body>
         <hero>
@@ -101,7 +101,7 @@ function initHTML() {
     </hero>
     <div class="container">
             <div class="row">`;
-  fs.writeFile("./output/team.html", HTML, function (err) {
+  fs.writeFile("./dist/team.html", HTML, function (err) {
     if (err) {
       console.log(err);
     }
@@ -157,7 +157,7 @@ function addHTML(member) {
         </div>`;
     }
     console.log("Team member added!");
-    fs.appendFile("./output/team.html", data, function (err) {
+    fs.appendFile("./dist/team.html", data, function (err) {
       if (err) {
         return reject(err);
       }
@@ -174,12 +174,12 @@ function finishHTML() {
 </body>
 </HTML>`;
 
-  fs.appendFile("./output/team.html", HTML, function (err) {
+  fs.appendFile("./dist/team.html", HTML, function (err) {
     if (err) {
       console.log(err);
     }
   });
-  console.log("Your team page has been created. Please look in the output folder.");
+  console.log("Your team page has been created. Please look in the dist folder.");
 }
 
 initApp();
