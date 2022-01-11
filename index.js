@@ -120,7 +120,8 @@ function addHTML(member) {
       const gitHub = member.getGitHub();
       data = `<div class="col-md-3 col-sm-12">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Engineer</h5>
+            <h5 class="card-header">${name}</h5>
+            <h6 class="card-header">Engineer</h6>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: <a href="mailto:${email}">${email}</a></li>
@@ -132,7 +133,8 @@ function addHTML(member) {
       const school = member.getSchool();
       data = `<div class="col-md-3 col-sm-12">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Intern</h5>
+            <h5 class="card-header">${name}</h5>
+            <h6 class="card-header">Intern</h6>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: <a href="mailto:${email}">${email}</a></li>
@@ -144,7 +146,8 @@ function addHTML(member) {
       const officePhone = member.getOfficeNumber();
       data = `<div class="col-md-3 col-sm-12">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${name}<br /><br />Manager</h5>
+            <h5 class="card-header">${name}</h5>
+            <h6 class="card-header">Manager</h6>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: <a href="mailto:${email}">${email}</a></li>
