@@ -1,5 +1,5 @@
 const Manager = require("../lib/Manager.js");
-const testManager = new Manager("Lauren", "232323", "lferrett@gmail.com");
+const testManager = new Manager("Lauren", "232323", "lferrett@gmail.com", "555-212-JAVA");
 
 describe("Manager", () => {
   it("test to see if the Manager class returns name, id, and email", () => {
@@ -30,5 +30,11 @@ describe("getEmail", () => {
 describe("getRole", () => {
   it("Test to see if getRole() returns role", () => {
     expect(testManager.getRole()).toBe("Manager");
+  });
+});
+
+describe("getOfficeNumber", () => {
+  it("Test to see if getOfficeNumber() returns office Number", () => {
+    expect(testManager.getOfficeNumber()).toBe("555-212-JAVA");
   });
 });
