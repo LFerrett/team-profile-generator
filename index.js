@@ -89,16 +89,19 @@ function initHTML() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>Dunder Mifflin Employee Directory</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><title>Dunder Mifflin Employee Directory</title>
+        <script src="https://kit.fontawesome.com/36d0870215.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../assets/style.css" />
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark mb-5">
-            <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
-        </nav>
-        <div class="container">
+        <hero>
+        <img class="d-block mx-auto mb-4" src="../assets/dundermifflin.png" alt="Dunder Mifflin">
+        <h1 class="display-5 fw-bold text-center">Office Directory</h1>
+        <br />
+    </hero>
+    <div class="container">
             <div class="row">`;
-  fs.writeFile("./output/team.HTML", HTML, function (err) {
+  fs.writeFile("./output/team.html", HTML, function (err) {
     if (err) {
       console.log(err);
     }
@@ -115,43 +118,43 @@ function addHTML(member) {
     let data = "";
     if (role === "Engineer") {
       const gitHub = member.getGitHub();
-      data = `<div class="col-6">
+      data = `<div class="col-md-3 col-sm-12">
             <div class="card mx-auto mb-3" style="width: 18rem">
             <h5 class="card-header">${name}<br /><br />Engineer</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
-                <li class="list-group-item">GitHub: ${gitHub}</li>
+                <li class="list-group-item">Email Address: <a href="mailto:${email}">${email}</a></li>
+                <li class="list-group-item">GitHub: <a href="http://www.github.com/${gitHub}">${gitHub}</a></li>
             </ul>
             </div>
         </div>`;
     } else if (role === "Intern") {
       const school = member.getSchool();
-      data = `<div class="col-6">
+      data = `<div class="col-md-3 col-sm-12">
             <div class="card mx-auto mb-3" style="width: 18rem">
             <h5 class="card-header">${name}<br /><br />Intern</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Email Address: <a href="mailto:${email}">${email}</a></li>
                 <li class="list-group-item">School: ${school}</li>
             </ul>
             </div>
         </div>`;
     } else {
       const officePhone = member.getOfficeNumber();
-      data = `<div class="col-6">
+      data = `<div class="col-md-3 col-sm-12">
             <div class="card mx-auto mb-3" style="width: 18rem">
             <h5 class="card-header">${name}<br /><br />Manager</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
-                <li class="list-group-item">Email Address: ${email}</li>
+                <li class="list-group-item">Email Address: <a href="mailto:${email}">${email}</a></li>
                 <li class="list-group-item">Office Phone: ${officePhone}</li>
             </ul>
             </div>
         </div>`;
     }
     console.log("Team member added!");
-    fs.appendFile("./output/team.HTML", data, function (err) {
+    fs.appendFile("./output/team.html", data, function (err) {
       if (err) {
         return reject(err);
       }
@@ -163,11 +166,12 @@ function addHTML(member) {
 function finishHTML() {
   const HTML = ` </div>
     </div>
-    
+ <footer class="text-center">Copyright <i class="fas fa-copyright"></i> 2022 Dunder Mifflin Paper Company</footer>
+   
 </body>
 </HTML>`;
 
-  fs.appendFile("./output/team.HTML", HTML, function (err) {
+  fs.appendFile("./output/team.html", HTML, function (err) {
     if (err) {
       console.log(err);
     }
