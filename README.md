@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. A user can enter any number of team members, assigning them roles such as 'Manager', 'Engineer', or 'Intern' and depending on which role is selected, different information is generated. The final HTML output is styled so that Dunder Mifflin Regional Managers can easily created their office directories. 
+This project is a Node.js command-line application that takes in information about employees on a team and generates an HTML webpage that displays summaries for each person. A user can enter any number of team members, assigning them roles such as 'Manager', 'Engineer', or 'Intern' and depending on which role is selected, different information is generated. The final HTML output is styled so that Dunder Mifflin Regional Managers can easily created their office directories. 
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ This project is a Node.js command-line application that takes in information abo
 
 ## Installation
 
-Fork the repo or copy the code and install on your machine. Run the file in your local terminal with command npm index.js.
+Fork the repo or copy the code and install on your machine. Run the file in your local terminal with command `node index.js`.
 
 ## Usage
 
@@ -54,7 +54,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Tests
-Four tests suites are coded into the project, containing a total of 23 tests. Tests are run through the Jest npm and can be run by executing "npm test" in the terminal. 
+Four tests suites are coded into the project, containing a total of 23 tests. Tests are run through the Jest npm and can be run by executing `npm test` in the terminal. 
 
 ## Questions
 Any questions can be directed to lferrett@gmail.com
